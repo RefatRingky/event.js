@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>More Event</h2>
+    <section>
+        <h3 id="secret-info">very very secret information</h3>
+    </section>
+    <input id="delete-confirm" type="text" placeholder="Please type delete">
+    <button id="delete-btn" disabled>Delete</button>
+    <script>
+        document.getElementById('delete-btn').addEventListener('click',function () {
+            document.getElementById('secret-info').style.display = 'none';
+        })
+
+        //  create focus event
+        document.getElementById('delete-confirm').addEventListener('focus',function () {
+            
+            document.body.style.backgroundColor = "lightcoral"
+        })
+
+        // create blur effect
+        document.getElementById('delete-confirm').addEventListener('blur',function () {
+            
+            document.body.style.backgroundColor = "white"
+        })
+
+        // //create  keydown event 
+        // document.getElementById('delete-confirm').addEventListener('keydown',function () {
+           
+        //     const deleteField = document.getElementById('delete-confirm');
+        //     console.log(deleteField.value);
+        // })
+        // create keypress event
+        // document.getElementById('delete-confirm').addEventListener('keypress',function () {
+           
+        //     const deleteField = document.getElementById('delete-confirm');
+        //     console.log(deleteField.value);
+        // })
+
+        // create keyup event
+        document.getElementById('delete-confirm').addEventListener('keyup',function (event) {
+            if (event.target.value == 'delete') {
+                document.getElementById('delete-btn').removeAttribute('disabled');
+            }
+            else{
+                deleteBtn. setAttribute('disabled',true);
+            }
+            // const deleteField = document.getElementById('delete-confirm');
+            // console.log(deleteField.value);
+        });
+        // change
+        document.getElementById('delete-confirm').addEventListener('change',function () {
+           
+            const deleteField = document.getElementById('delete-confirm');
+            console.log(deleteField.value);
+        })
+
+
+    </script>
+</body>
+</html>
