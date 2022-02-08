@@ -33,3 +33,17 @@ hotPink.addEventListener('click', function() {
 document.getElementById("light-blue-button").addEventListener('click',function () {
     document.body.style.backgroundColor ='lightblue';
 })
+
+// just function use
+function handleJustFunction() {
+    const p = document.getElementById("clicking-method");
+    p.innerText='set add event lisetener'; 
+}
+
+// direct add event
+ocument.getElementById("handle-event").addEventListener('click',function () {
+    const p = document.getElementById("clicking-method");
+    p.innerText='set by direct add event lisetener';
+   })
+
+// input fields usin add event lisetener
